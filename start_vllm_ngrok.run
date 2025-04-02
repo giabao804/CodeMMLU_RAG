@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Install necessary Python packages
+pip install vllm transformers pyngrok
+
+# Configure ngrok with your authtoken
+ngrok config add-authtoken 2u4kZ9NE9Nt0ZVgQTCARZGL55gK_7nrVhJpfhr8QwdmxdxzU7
+
+# Start the vLLM server and expose it with ngrok
+vllm serve Qwen/Qwen2.5-Coder-7B-Instruct \
+  --port 11434 \
+  --dtype=half \
+  --max-seq-len 4096 \
+  --tensor-parallel-size 2 &
+
+# Wait for the server to start
+sleep 5
+
+# Run ngrok tunnel
+ngrok http 11434 \
+  --host-header="localhost:11434" \
+  --log stdout \
+  --url glad-bass-wrongly.ngrok-free.app
