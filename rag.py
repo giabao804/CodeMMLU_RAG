@@ -4,7 +4,7 @@ from torch.nn import functional as F
 import numpy as np
 import pandas as pd
 
-
+# Retrieval Augemnted Generation (RAG) class for retrieval-augmented generation tasks.
 class RAG:
     def __init__(self, train_csv_data, train_pkl_path, test_pkl_path):
         self.train_csv_data = train_csv_data
