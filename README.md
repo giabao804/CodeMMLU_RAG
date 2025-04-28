@@ -17,7 +17,7 @@ Results that evaluated on the public and private test dataset with all 1253 mult
 |`Qwen2.5-Coder-Instruct (Baseline)`|7| 54 |53|
 |`Qwen2.5-Coder-Instruct (Baseline)` |0.5| 30 |28|
 |`Qwen2.5-Coder-Instruct (Fine-tuned)`|0.5| 40 |36|
-|`Qwen2.5-Coder-Instruct (Fine-tuned) + RAG`|0.5|44 |52|
+|`Qwen2.5-Coder-Instruct (Fine-tuned) + RAG`|0.5|50 |52|
 |`Multi-agent Qwen2.5-Coder`|0.5|**63** |**62**|
 
 ## Running
